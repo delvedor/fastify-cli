@@ -16,7 +16,7 @@ const app = Fastify({
 });
 
 // Register your application as a normal plugin.
-app.register(import("./app"));
+app.register(import("./src/app"));
 
 // delay is the number of milliseconds for the graceful close to finish 
 const closeListeners = closeWithGrace({ delay: 500 }, async function ({ signal, err, manual }) {
